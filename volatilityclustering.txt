@@ -1,0 +1,27 @@
+In this project, I source stock data from yahoo finance using yfinance library.
+
+The idea is to cluster stocks that have similar rolling volatility pattern across a T year time horizon with a window size B business days and plot graph to aid in visulaizing clusters.
+PCA is used to reduce dimensionality.
+Doing so reveals group of stocks that behave similarly in terms of risk (volatility)
+
+Future Work -
+    i. Vary window length to capture long term / short term shocks
+    ii. Cluster on returns + vol or additional features like skew, kurtosis, beta, etc.
+    iii. Use better clustering algo - DBSCAN, heirarichal clustering, GMM
+    iv. Dynamic Clustering Over Time - 
+    v. Evaluate cluster quality - metrics like silhouette score, inertia, or Davies–Bouldin index
+    vi. Add Market Regime Overlays - Map clusters across bull vs. bear markets, high vs. low VIX regimes
+    vii. Connect to Trade ideas
+    viii. Incorporate Sector Information - Compare clusters against GICS sectors to see whether volatility clustering aligns or cuts across sectors
+
+
+Limitations -
+    i. This is only partial insight - as we cluster volatility and not returns
+    ii. KMeans assumes spherical clusters, real world may non-spherical, 
+    iii. Doesn't consider any macro factors, sector exposures
+
+
+Applications -
+
+Observations - 
+
